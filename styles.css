@@ -1,0 +1,164 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    margin: 20px auto;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    color: #ffdd57;
+}
+
+/* Centrar y estilizar los títulos de los gráficos */
+.chart h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+}
+
+.ingreso-container,
+.gasto-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%; /* Asegúrate de que ocupan el ancho disponible */
+    max-width: 200px; /* Limita el ancho máximo */
+}
+
+.form-container input[type="date"] {
+    width: calc(100% - 16px); /* Ajustar el ancho del input */
+    min-width: 200px;
+}
+
+.form-container input[type="text"] {
+    flex: 1; /* Permite que ambos controles se ajusten y ocupen igual espacio */
+    max-width: 200px; /* Ancho máximo */
+}
+
+.form-container select {
+    flex: 1; /* Permite que ambos controles se ajusten y ocupen igual espacio */
+    max-width: 200px; /* Ancho máximo */
+}
+
+.form-container button {
+    align-self: center; /* Centra el botón dentro del contenedor del formulario */
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.records-table th,
+.records-table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+.records-table th {
+    background-color: #f2f2f2;
+}
+
+.records-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.records-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+.records-table td:nth-child(3),
+.records-table td:nth-child(4),
+.records-table td:nth-child(5) {
+    text-align: right;
+}
+
+.charts-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.chart {
+    width: 48%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chart canvas {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .charts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}

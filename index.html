@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ingresos y Gastos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Registro de Ingresos y Gastos</h1>
+    </header>
+    
+    <div class="container">
+        <div class="form-container">
+            <input type="date" id="fecha">
+            
+            <div class="ingreso-container">
+                <input type="text" id="ingresos" placeholder="Ingresos">
+                <select id="tipoIngreso">
+                    <option value="salarios">Salarios</option>
+                    <option value="honorarios">Honorarios</option>
+                    <option value="intereses">Intereses</option>
+                    <option value="ganancias">Ganancias</option>
+                </select>
+            </div>
+            
+            <div class="gasto-container">
+                <input type="text" id="gastos" placeholder="Gastos">
+                <select id="tipoGasto">
+                    <option value="arriendo">Arriendo</option>
+                    <option value="comida">Comida</option>
+                    <option value="vestuario">Vestuario</option>
+                    <option value="educacion">Educación</option>
+                    <option value="deportes">Deportes</option>
+                </select>
+            </div>
+            
+            <button id="agregar">Agregar Registro</button>
+        </div>
+
+        <table class="records-table" id="registrosTable">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Ingreso</th>
+                    <th>Gasto</th>
+                    <th>Saldo</th>
+                </tr>
+            </thead>
+            <tbody id="registrosBody">
+                <!-- Filas de registros se agregarán dinámicamente aquí -->
+            </tbody>
+        </table>
+
+        <div class="charts-container">
+            <div class="chart">
+                <h2>Gráfico de Ingresos</h2>
+                <canvas id="graficoIngresos"></canvas>
+            </div>
+            <div class="chart">
+                <h2>Gráfico de Gastos</h2>
+                <canvas id="graficoGastos"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 
